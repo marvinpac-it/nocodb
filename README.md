@@ -1,6 +1,6 @@
-# Tuleap
+# NocoDB
 
-Deploy Tuleap on a CentOS/8 Vagrant box using the official Tuleap Docker container.
+Deploy NocoDB on a CentOS/8 Vagrant box using the postgresql docker-compose.yml file.
 
 ## Getting Started
 
@@ -18,8 +18,8 @@ Install git https://gitforwindows.org/
 Clone the repository onto your local machine
 
 ```
-git clone git@github.com:oboudry-mvp/tuleap-on-vagrant.git
-cd tuleap-on-vagrant
+git clone https://github.com/marvinpac-it/nocodb.git
+cd nocodb
 ```
 
 Provision the virtual machine
@@ -28,7 +28,11 @@ Provision the virtual machine
 vagrant up
 ```
 
-Logon to the VM using `vagrant ssh` and run `docker-compose exec web cat /root/.tuleap_passwd` to get the admin password for your Tuleap installation.
+Logon to the VM using `vagrant ssh`.
+
+NocoDB is accessible on the host computer through port 8080
+
+http://localhost:8080
 
 Once you're finished playing with the VM, you can either suspend it (can be restarted with `vagrant up`) or destroy it.
 
