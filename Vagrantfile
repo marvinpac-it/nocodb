@@ -92,7 +92,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", run: "always", inline: <<-SHELL
     cd nocodb/docker-compose/pg
     /usr/local/bin/docker-compose pull
-    # /usr/local/bin/docker-compose rm -f
     /usr/local/bin/docker-compose up -d
   SHELL
 end
